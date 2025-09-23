@@ -29,6 +29,7 @@ export function App() {
                      id='meuInput'
                      type='text'
                      labelText='Mande aê'
+                     placeholder='Digite algo'
                   />
                </div>
 
