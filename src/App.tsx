@@ -11,13 +11,13 @@ import { DefaultButton } from './components/DefaultButton';
 import { PlayCircleIcon } from 'lucide-react';
 import { Footer } from './components/Footer';
 import { Heading } from './components/Heading';
+import { useState } from 'react';
 
 export function App() {
-   let numero = 0;
+   const [numero, setNumero] = useState(0);
 
    function handleClick() {
-      numero++;
-      console.log(numero);
+      setNumero(prevState => prevState + 1);
    }
 
    return (
