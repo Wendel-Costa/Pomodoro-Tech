@@ -10,10 +10,21 @@ import { Cycles } from './components/Cycles';
 import { DefaultButton } from './components/DefaultButton';
 import { PlayCircleIcon } from 'lucide-react';
 import { Footer } from './components/Footer';
+import { Heading } from './components/Heading';
 
 export function App() {
+   let numero = 0;
+
+   function handleClick() {
+      numero++;
+      console.log(numero);
+   }
+
    return (
       <>
+         <Heading>Número: {numero}</Heading>
+         <button onClick={handleClick}>oi</button>
+
          <Container>
             <Logo />
          </Container>
@@ -32,7 +43,7 @@ export function App() {
                   <DefaultInput
                      id='meuInput'
                      type='text'
-                     labelText='Mande aê'
+                     labelText={numero.toString()}
                      placeholder='Digite algo'
                   />
                </div>
