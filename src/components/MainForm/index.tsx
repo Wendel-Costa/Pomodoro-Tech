@@ -5,8 +5,12 @@ import { DefaultButton } from '../DefaultButton';
 import { PlayCircleIcon } from 'lucide-react';
 
 export function MainForm() {
+   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+      event.preventDefault();
+   }
+
    return (
-      <form className='form' action=''>
+      <form onSubmit={handleSubmit} className='form' action=''>
          <div className='formRow'>
             <DefaultInput
                id='meuInput'
