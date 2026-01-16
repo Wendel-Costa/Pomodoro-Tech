@@ -3,13 +3,14 @@ import { DefaultInput } from '../DefaultInput';
 import { Cycles } from '../Cycles';
 import { DefaultButton } from '../DefaultButton';
 import { PlayCircleIcon } from 'lucide-react';
-import { useState } from 'react';
+import { useRef } from 'react';
 
 export function MainForm() {
-   const [taskName, setTaskName] = useState('');
+   const taskNameInput = useRef<HTMLInputElement>(null);
 
    function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
       event.preventDefault();
+      alert('ook');
    }
 
    return (
@@ -20,8 +21,7 @@ export function MainForm() {
                type='text'
                labelText='chama'
                placeholder='Digite algo'
-               value={taskName}
-               onChange={e => setTaskName(e.target.value)}
+               ref={taskNameInput}
             />
          </div>
 
