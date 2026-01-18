@@ -63,6 +63,7 @@ export function MainForm() {
                labelText='chama'
                placeholder='Digite algo'
                ref={taskNameInput}
+               disabled={!!state.activeTask}
             />
          </div>
 
